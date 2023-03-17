@@ -1,0 +1,17 @@
+a. 30 13 * * 1-5 /home/johndoe/script.sh
+This crontab entry runs the script /home/johndoe/script.sh at 1:30 PM every weekday (Monday to Friday).
+
+b. 00 09-18 * * * /home/johndoe/script.sh >> xxxx.out
+This crontab entry runs the script /home/johndoe/script.sh every hour between 9 AM and 6 PM.
+
+c. 30 08 1 1 * /home/johndoe/script.sh >> xxxx.out 2>>yyyy.out
+This crontab entry runs the script /home/johndoe/script.sh at 8:30 AM on January 1st of every year.
+
+d. 0,20,40 11 * * 0 /home/johndoe/script.sh >> zzzz.out 2>&1
+This crontab entry runs the script /home/johndoe/script.sh every Sunday at 11:00 AM, 11:20 AM, and 11:40 AM.
+
+e. 00 09 10-20 1-3 * /home/johndoe/script.sh > /dev/null
+This crontab entry runs the script /home/johndoe/script.sh at 9:00 AM on the 10th to 20th day of every month from January to March.
+
+f. */30 * * * * /home/johndoe/script.sh > /dev/null 2>&1
+This crontab entry runs the script /home/johndoe/script.sh every 30 minutes of every hour.
